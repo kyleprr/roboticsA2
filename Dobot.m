@@ -1,6 +1,5 @@
 classdef Dobot < handle
-    
-   
+       
      properties 
          model;
          
@@ -18,12 +17,9 @@ classdef Dobot < handle
             % Load and Plot Robot Links
             PlotAndColourRobot(self);
             drawnow();
-               
-                drawnow();
+                            
             end
-        
-    
-               
+                    
         % Create and return a Dobot robot model to main file
         function GetDobot(self, name, base_location)
             
@@ -70,13 +66,8 @@ L3 = Link('d',103,'a',0,'alpha',0,'offset', 0, 'qlim',[deg2rad(-10) deg2rad(95)]
                     continue;
                 end
             end
-        end   
-        
-        
-     
-        
+        end              
+      
      end 
-        
-   
-        
+                
 end
