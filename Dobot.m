@@ -13,7 +13,7 @@ classdef Dobot < handle
             
         function self = Dobot(name, base_location)
             
-            %Create UR3 robot
+            %Create Dobot robot
             GetDobot(self, name, base_location);
             % Load and Plot Robot Links
             PlotAndColourRobot(self);
@@ -23,8 +23,8 @@ classdef Dobot < handle
             end
         
     
-                %% GetUR3Robot
-        % Create and return a UR3 robot model
+               
+        % Create and return a Dobot robot model to main file
         function GetDobot(self, name, base_location)
             
 L1 = Link('d',0.057,'a',0,'alpha',0,'offset', 0, 'qlim',[-pi pi]);
