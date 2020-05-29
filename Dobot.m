@@ -23,9 +23,9 @@ classdef Dobot < handle
         % Create and return a Dobot robot model to main file
         function GetDobot(self, name, base_location)
             
-L1 = Link('d',0.057,'a',0,'alpha',0,'offset', 0, 'qlim',[-pi pi]);
-L2 = Link('d',0.103,'a',0,'alpha',0,'offset', 0, 'qlim',[0 deg2rad(85)]);
-L3 = Link('d',103,'a',0,'alpha',0,'offset', 0, 'qlim',[deg2rad(-10) deg2rad(95)]) ;  
+L1 = Link('d',0.138,'a',0,'alpha',-pi/2,'offset', 0, 'qlim',[-pi pi]);
+L2 = Link('d',0,'a',0,'alpha',0,'offset', 0, 'qlim',[0 deg2rad(85)]);
+L3 = Link('d',122,'a',0,'alpha',0,'offset', 0, 'qlim',[deg2rad(-10) deg2rad(95)]) ;  
 
             
             self.model = SerialLink([L1 L2 L3],'name',name);
