@@ -3,7 +3,7 @@ workspace = [-2 2 -2 2 -1 1];
 
 % Generate random points
 x=rand(1,3)*0.5;
-y=rand(1,3)*0.5;
+y=rand(1,3)*0.2;
 %scatter(x,y)
 
 ripelocation = [x(1), y(1)];
