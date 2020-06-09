@@ -1,6 +1,6 @@
 classdef Dobot < handle
     
-   
+   % Sourced from UR3 Class and Peter Crke's toolbox robot models (UR5)
      properties 
          model;
          
@@ -27,10 +27,10 @@ classdef Dobot < handle
         % Create and return a UR3 robot model
         function GetDobot(self, name, base_location)
             
-L1 = Link('d',0.138,'a',0,'alpha',-pi/2,'offset', 0, 'qlim',[-pi pi]);
-L2 = Link('d',0,'a',0.135,'alpha',0,'offset', 0, 'qlim',deg2rad([-85 15]));
-L3 = Link('d',0,'a',0.147,'alpha',0,'offset', 0, 'qlim',deg2rad([30 120])) ;  
-L4 = Link('d', 0, 'a', 0.055, 'alpha', -pi/2, 'offset', 0, 'qlim', deg2rad([-20 60]));
+L1 = Link('d',0.138,'a',0,'alpha',-pi/2,'offset', pi, 'qlim',[-2*pi 2*pi]);
+L2 = Link('d',0,'a',0.135,'alpha',0,'offset', 0, 'qlim',deg2rad([-70 25]));
+L3 = Link('d',0,'a',0.147,'alpha',0,'offset', 0, 'qlim',deg2rad([-40 120])) ;  
+L4 = Link('d', 0, 'a', 0.055, 'alpha', -pi/2, 'offset', 0, 'qlim', deg2rad([-70 400]));
 L5 = Link('d', 0.055, 'a', 0, 'alpha', 0, 'offset', 0,  'qlim', [0 0]);
 
             
